@@ -79,4 +79,31 @@ describe MangoWeather::Climate do
       )
     end
   end
+
+  describe 'forecast_by_city_name' do
+    it 'gets data of current weather for a specific city' do
+      filepath = File.join(Rails.root + "spec/support/fixtures/forecast_by_city_name.json")
+      climate_data = File.open(filepath).read
+      parsed_climate = JSON.parse(climate_data, :symbolize_names => true)
+
+      app_id = SECRETS["defaults"]["open_weather_map"]
+      stub_request(:get, "http://api.openweathermap.org/data/2.5/forecast?APPID=#{app_id}&cnt=3&q=,Republic%20of%20Guatemala,%20GT&units=metric").
+         with(
+           headers: {
+          'Accept'=>'*/*',
+          'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+          'Host'=>'api.openweathermap.org',
+          'User-Agent'=>'Ruby'
+           }).
+         to_return(status: 200, body: climate_data, headers: {})
+
+      climate = MangoWeather::Climate.forecast_by_city_name("Republic of Guatemala, GT")
+
+      expect(climate["cnt"]).to eq(parsed_climate[:cnt])
+      expect(climate["list"].count).to eq(parsed_climate[:list].count)
+      expect(climate["list"].first["weather"].first["description"]).to eq(
+        parsed_climate[:list].first[:weather].first[:description]
+      )
+    end
+  end
 end
