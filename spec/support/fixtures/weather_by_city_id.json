@@ -1,45 +1,43 @@
-[
-  {
-    "coord": {
-      "lon": -90.25,
-      "lat": 15.5
-    },
-    "weather":
-    [
-      {
-        "id": 500,
-        "main": "Rain",
-        "description": "light rain",
-        "icon": "10n"
-      }
-    ],
-    "base": "stations",
-    "main": {
-      "temp": 19.68,
-      "pressure": 938.32,
-      "humidity": 99,
-      "temp_min": 19.68,
-      "temp_max": 19.68,
-      "sea_level": 1028,
-      "grnd_level": 938.32
-    },
-    "wind": {
-      "speed": 0.58,
-      "deg": 175.502
-    },
-    "rain": {
-      "3h": 0.465
-    },
-    "clouds": {"all": 92},
-    "dt": 1525248440,
-    "sys": {
-      "message": 0.0233,
-      "country": "GT",
-      "sunrise": 1525260999,
-      "sunset": 1525306763
-    },
-    "id": 3595528,
-    "name": "Republic of Guatemala",
-    "cod": 200
-  }
-]
+{
+  "coord": {
+    "lon": -90.25,
+    "lat": 15.5
+  },
+  "weather":
+  [
+    {
+      "id": 500,
+      "main": "Rain",
+      "description": "light rain",
+      "icon": "10n"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 19.68,
+    "pressure": 938.32,
+    "humidity": 99,
+    "temp_min": 19.68,
+    "temp_max": 19.68,
+    "sea_level": 1028,
+    "grnd_level": 938.32
+  },
+  "wind": {
+    "speed": 0.58,
+    "deg": 175.502
+  },
+  "rain": {
+    "3h": 0.465
+  },
+  "clouds": {"all": 92},
+  "dt": 1525248440,
+  "sys": {
+    "message": 0.0233,
+    "country": "GT",
+    "sunrise": 1525260999,
+    "sunset": 1525306763
+  },
+  "id": 3595528,
+  "name": "Republic of Guatemala",
+  "cod": 200
+}
