@@ -1,84 +1,82 @@
-[
-  {
-    "cnt": 2,
-    "list": [
-      {
-        "coord": {
-          "lon": -90.25,
-          "lat": 15.5
-        },
-        "sys": {
-          "type": 0,
-          "id": 0,
-          "message": 0.0038,
-          "country": "GT",
-          "sunrise": 1525260999,
-          "sunset": 1525306763
-        },
-        "weather": [
-          {
-            "id": 500,
-            "main": "Rain",
-            "description": "light rain",
-            "icon": "10n"
-          }
-        ],
-        "main": {
-          "temp": 19.68,
-          "pressure": 938.32,
-          "humidity": 99,
-          "temp_min": 19.68,
-           "temp_max": 19.68,
-           "sea_level": 1028,
-           "grnd_level": 938.32
-        },
-        "wind": {
-          "speed": 0.58,
-          "deg": 175.502
-        },
-        "clouds": {"all": 92},
-        "dt": 1525248808,
-        "id": 3595528,
-        "name": "Republic of Guatemala"
+{
+  "cnt": 2,
+  "list": [
+    {
+      "coord": {
+        "lon": -90.25,
+        "lat": 15.5
       },
-      {
-        "coord": {
-          "lon": 13.41,
-          "lat": 52.52
-        },
-        "sys": {
-          "type": 1,
-          "id": 4892,
-          "message": 0.0034,
-          "country": "DE",
-          "sunrise": 1525231965,
-          "sunset": 1525286100
-        },
-        "weather": [
-          {
-            "id": 800,
-            "main": "Clear",
-            "description": "clear sky",
-            "icon": "01d"
-          }
-        ],
-        "main": {
-          "temp": 13,
-          "pressure": 1017,
-          "humidity": 43,
-          "temp_min": 13,
-          "temp_max": 13
-        },
-        "visibility": 10000,
-        "wind": {
-          "speed": 3.1,
-          "deg": 110
-        },
-        "clouds": {"all": 0},
-        "dt": 1525248808,
-        "id": 2950159,
-        "name": "Berlin"
-      }
-    ]
-  }
-]
+      "sys": {
+        "type": 0,
+        "id": 0,
+        "message": 0.0038,
+        "country": "GT",
+        "sunrise": 1525260999,
+        "sunset": 1525306763
+      },
+      "weather": [
+        {
+          "id": 500,
+          "main": "Rain",
+          "description": "light rain",
+          "icon": "10n"
+        }
+      ],
+      "main": {
+        "temp": 19.68,
+        "pressure": 938.32,
+        "humidity": 99,
+        "temp_min": 19.68,
+         "temp_max": 19.68,
+         "sea_level": 1028,
+         "grnd_level": 938.32
+      },
+      "wind": {
+        "speed": 0.58,
+        "deg": 175.502
+      },
+      "clouds": {"all": 92},
+      "dt": 1525248808,
+      "id": 3595528,
+      "name": "Republic of Guatemala"
+    },
+    {
+      "coord": {
+        "lon": 13.41,
+        "lat": 52.52
+      },
+      "sys": {
+        "type": 1,
+        "id": 4892,
+        "message": 0.0034,
+        "country": "DE",
+        "sunrise": 1525231965,
+        "sunset": 1525286100
+      },
+      "weather": [
+        {
+          "id": 800,
+          "main": "Clear",
+          "description": "clear sky",
+          "icon": "01d"
+        }
+      ],
+      "main": {
+        "temp": 13,
+        "pressure": 1017,
+        "humidity": 43,
+        "temp_min": 13,
+        "temp_max": 13
+      },
+      "visibility": 10000,
+      "wind": {
+        "speed": 3.1,
+        "deg": 110
+      },
+      "clouds": {"all": 0},
+      "dt": 1525248808,
+      "id": 2950159,
+      "name": "Berlin"
+    }
+  ]
+}
