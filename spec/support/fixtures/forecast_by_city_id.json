@@ -1,0 +1,100 @@
+{
+  "cod": "200",
+  "message": 0.0029,
+  "cnt": 3,
+  "list": [
+    {
+      "dt": 1525251600,
+      "main": {
+        "temp": 21.87,
+        "temp_min": 18.93,
+        "temp_max": 21.87,
+        "pressure": 880.69,
+        "sea_level": 1033.15,
+        "grnd_level": 880.69,
+        "humidity": 50,
+        "temp_kf": 2.93
+      },
+      "weather": [
+        {
+          "id": 800,
+          "main": "Clear",
+          "description": "clear sky",
+          "icon": "01d"
+        }
+      ],
+      "clouds": {"all": 0},
+      "wind": {
+        "speed": 4.83,
+        "deg": 88.0019
+      },
+      "sys": {"pod": "d"},
+      "dt_txt": "2018-05-02 09:00:00"
+    },
+    {
+      "dt": 1525262400,
+      "main": {
+        "temp": 20.72,
+        "temp_min": 18.52,
+        "temp_max": 20.72,
+        "pressure": 880.14,
+        "sea_level": 1032.13,
+        "grnd_level": 880.14,
+        "humidity": 34,
+        "temp_kf": 2.2
+      },
+      "weather": [
+        {
+          "id": 800,
+          "main": "Clear",
+          "description": "clear sky",
+          "icon": "01d"
+        }
+      ],
+      "clouds": {"all": 0},
+      "wind": {
+        "speed": 6.17,
+        "deg": 87.0025
+      },
+      "sys": {"pod": "d"},
+      "dt_txt": "2018-05-02 12:00:00"
+    }, {
+      "dt": 1525273200,
+      "main": {
+        "temp": 14.67,
+        "temp_min": 13.2,
+        "temp_max": 14.67,
+        "pressure": 880.53,
+        "sea_level": 1033.27,
+        "grnd_level": 880.53,
+        "humidity": 31,
+        "temp_kf": 1.47
+      },
+      "weather": [
+        {
+          "id": 800,
+          "main": "Clear",
+          "description": "clear sky",
+          "icon": "01n"
+        }
+      ],
+      "clouds": {"all": 0},
+      "wind": {
+        "speed": 4.81,
+        "deg": 89.5037
+      },
+      "sys": {"pod": "n"},
+      "dt_txt": "2018-05-02 15:00:00"
+    }
+  ],
+  "city": {
+    "id": 122285,
+    "name": "بلقشه",
+    "coord": {
+      "lat": 36.154,
+      "lon": 58.7878
+    },
+    "country": "IR",
+    "population": 220929
+  }
+}
