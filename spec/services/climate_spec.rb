@@ -4,12 +4,12 @@ describe MangoWeather::Climate do
   let(:client) do
     instance_double(
       OpenWeather::Client,
-      current_weather: { 'name': 'Guatemala' },
-      current_city_id: { 'id': 3595528 },
+      current_weather: { name: 'Guatemala' },
+      current_city_id: { id: 3595528 },
       current_cities_id: {
-        'list': [{name: 'Guatemala'}, {name: 'Berlin'}]
+        list: [{ name: 'Guatemala' }, { name: 'Berlin' }]
       },
-      one_call: {'list': []}
+      one_call: { list: [] }
     )
   end
 
@@ -38,11 +38,11 @@ describe MangoWeather::Climate do
   end
 
   describe 'weather_for_cities' do
-    subject { described_class.weather_for_cities(cities_array: [3595528,2950159]) }
+    subject { described_class.weather_for_cities(cities_array: [3595528, 2950159]) }
 
     it 'calls the method weather_for_cities with the specific ids' do
-      expect(described_class).to receive(:weather_for_cities).with(cities_array: [3595528,2950159])
-      
+      expect(described_class).to receive(:weather_for_cities).with(cities_array: [3595528, 2950159])
+
       subject
     end
   end
