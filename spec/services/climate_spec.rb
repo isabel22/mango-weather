@@ -4,7 +4,7 @@ describe MangoWeather::Climate do
   describe 'weather_by_city_name' do
     it 'gets data of current weather for a specific city' do
       filepath = File.join(Rails.root + "spec/support/fixtures/weather_by_city_name.json")
-      climate_data = File.open(filepath).read
+      climate_data = File.read(filepath)
       parsed_climate = JSON.parse(climate_data, :symbolize_names => true)
 
       app_id = SECRETS["defaults"]["open_weather_map"]
@@ -30,7 +30,7 @@ describe MangoWeather::Climate do
   describe 'weather_by_city_id' do
     it 'gets data of current weather for a specific city' do
       filepath = File.join(Rails.root + "spec/support/fixtures/weather_by_city_id.json")
-      climate_data = File.open(filepath).read
+      climate_data = File.read(filepath)
       parsed_climate = JSON.parse(climate_data, :symbolize_names => true)
 
       app_id = SECRETS["defaults"]["open_weather_map"]
@@ -56,7 +56,7 @@ describe MangoWeather::Climate do
   describe 'weather_for_cities' do
     it 'gets data of current weather for multiple cities' do
       filepath = File.join(Rails.root + "spec/support/fixtures/weather_for_cities.json")
-      climate_data = File.open(filepath).read
+      climate_data = File.read(filepath)
       parsed_climate = JSON.parse(climate_data, :symbolize_names => true)
 
       app_id = SECRETS["defaults"]["open_weather_map"]
@@ -83,7 +83,7 @@ describe MangoWeather::Climate do
   describe 'forecast_by_city_name' do
     it 'gets the weather forecast for a specific city' do
       filepath = File.join(Rails.root + "spec/support/fixtures/forecast_by_city_name.json")
-      climate_data = File.open(filepath).read
+      climate_data = File.read(filepath)
       parsed_climate = JSON.parse(climate_data, :symbolize_names => true)
 
       app_id = SECRETS["defaults"]["open_weather_map"]
@@ -110,7 +110,7 @@ describe MangoWeather::Climate do
   describe 'forecast_by_city_id' do
     it 'gets the weather forecast for a specific city_id' do
       filepath = File.join(Rails.root + "spec/support/fixtures/forecast_by_city_id.json")
-      climate_data = File.open(filepath).read
+      climate_data = File.read(filepath)
       parsed_climate = JSON.parse(climate_data, :symbolize_names => true)
 
       app_id = SECRETS["defaults"]["open_weather_map"]
