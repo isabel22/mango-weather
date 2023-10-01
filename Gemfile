@@ -39,6 +39,10 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara'
   gem 'rspec-rails'
+  gem 'rubocop', require: false
+  gem 'rubocop-performance'
+  gem 'rubocop-rails'
+  gem 'rubocop-rspec'
   gem 'webmock'
 end
 
