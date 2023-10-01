@@ -39,6 +39,7 @@ group :development, :test do
   gem 'byebug'
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara'
+  gem 'dotenv-rails'
   gem 'rspec-rails'
   gem 'rubocop', require: false
   gem 'rubocop-performance'
@@ -60,4 +61,4 @@ end
 gem 'tzinfo-data'
 
 # Openweathermap gem to get the weather
-gem 'open-weather'
+gem 'open-weather-ruby-client'

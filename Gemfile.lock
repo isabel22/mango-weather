@@ -105,14 +105,26 @@ GEM
     crass (1.0.6)
     date (3.3.3)
     diff-lcs (1.5.0)
+    dotenv (2.8.1)
+    dotenv-rails (2.8.1)
+      dotenv (= 2.8.1)
+      railties (>= 3.2)
     drb (2.1.1)
       ruby2_keywords
     erubi (1.12.0)
     execjs (2.9.1)
+    faraday (2.7.11)
+      base64
+      faraday-net_http (>= 2.0, < 3.1)
+      ruby2_keywords (>= 0.0.4)
+    faraday-multipart (1.0.4)
+      multipart-post (~> 2)
+    faraday-net_http (3.0.2)
     ffi (1.16.2)
     globalid (1.2.1)
       activesupport (>= 6.1)
     hashdiff (1.0.1)
+    hashie (5.0.0)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     io-console (0.6.0)
@@ -138,6 +150,7 @@ GEM
     matrix (0.4.2)
     mini_mime (1.1.5)
     minitest (5.20.0)
+    multipart-post (2.3.0)
     mutex_m (0.1.2)
     net-imap (0.3.7)
       date
@@ -151,8 +164,11 @@ GEM
     nio4r (2.5.9)
     nokogiri (1.15.4-x86_64-darwin)
       racc (~> 1.4)
-    open-weather (0.12.0)
-      json (~> 1)
+    open-weather-ruby-client (0.4.0)
+      activesupport
+      faraday (>= 2.0.1)
+      faraday-multipart
+      hashie
     parallel (1.23.0)
     parser (3.2.2.3)
       ast (~> 2.4.1)
@@ -311,10 +327,11 @@ DEPENDENCIES
   byebug
   capybara
   coffee-rails (~> 4.2)
+  dotenv-rails
   jbuilder
   json
   listen
-  open-weather
+  open-weather-ruby-client
   puma (~> 5.6)
   rails (~> 7.1.0.rc1)
   rspec-rails
