@@ -1,42 +1,47 @@
-require 'open_weather'
+require 'open-weather-ruby-client'
 
 module MangoWeather
   class Climate
-
-    def self.weather_by_city_name(city_name)
-      # city_name in the following pattern: "city, country ISO"
-      # e.g.: "Berlin, DE"
-      OpenWeather::Current.city(city_name, self.options)
+    # List of city ID city.list.json.gz can be downloaded here:
+    # http://bulk.openweathermap.org/sample/
+    def self.weather_by_city_name(city_name:)
+      new.weather_by_city_name(city_name)
     end
 
-    def self.weather_by_city_id(city_id)
-      # List of city ID city.list.json.gz can be downloaded here:
-      # http://bulk.openweathermap.org/sample/
-      OpenWeather::Current.city_id(city_id, self.options)
+    def self.weather_by_city_id(city_id:)
+      new.weather_by_city_id(city_id)
     end
 
-    def self.weather_for_cities(cities_array)
-      # List of city ID city.list.json.gz can be downloaded here:
-      # http://bulk.openweathermap.org/sample/
-      OpenWeather::Current.cities(cities_array, self.options)
+    def self.weather_for_cities(cities_array:)
+      new.weather_for_cities(cities_array)
     end
 
-    def self.forecast_by_city_name(city_name, days = 3)
-      OpenWeather::Forecast.city(city_name, self.options(days))
+    def self.forecast(latitude:, longitude:)
+      new.forecast(latitude, longitude)
     end
 
-    def self.forecast_by_city_id(city_id, days = 3)
-      OpenWeather::Forecast.city_id(city_id, self.options(days))
+    def initialize
+      @client = OpenWeather::Client.new
+    end
+
+    def weather_by_city_name(city_name)
+      client.current_weather(city: city_name)
+    end
+
+    def weather_by_city_id(city_id)
+      client.current_city_id(city_id)
+    end
+
+    def weather_for_cities(cities_array)
+      client.current_cities_id(cities_array)
+    end
+
+    def forecast(latitude, longitude)
+      client.one_call(lat: latitude, lon: longitude)
     end
 
     private
 
-    def self.options(days = nil)
-      api_key = SECRETS["defaults"]["open_weather_map"]
-      @options = {units: "metric", APPID: api_key}
-      @options[:cnt] = days if days.present?
-
-      @options
-    end
+    attr_reader :client
   end
 end
