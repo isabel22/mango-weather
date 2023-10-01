@@ -358,3 +358,10 @@ Style/StringLiterals:
 Style/SymbolArray:
   Exclude:
     - 'config/initializers/filter_parameter_logging.rb'
+
+Lint/EmptyBlock:
+  Exclude:
+    - 'db/schema.rb'
+
+Style/NumericLiterals:
+  Enabled: false
