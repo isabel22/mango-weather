@@ -159,7 +159,9 @@ GEM
     net-smtp (0.4.0)
       net-protocol
     nio4r (2.5.9)
-    nokogiri (1.15.4-x86_64-darwin)
+    nokogiri (1.16.3-x86_64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.16.3-x86_64-linux)
       racc (~> 1.4)
     open-weather-ruby-client (0.4.0)
       activesupport
@@ -175,7 +177,7 @@ GEM
     public_suffix (5.0.3)
     puma (5.6.7)
       nio4r (~> 2.0)
-    racc (1.7.1)
+    racc (1.7.3)
     rack (2.2.8)
     rack-session (1.0.1)
       rack (< 3)
@@ -286,6 +288,7 @@ GEM
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
     sqlite3 (1.6.6-x86_64-darwin)
+    sqlite3 (1.6.6-x86_64-linux)
     stringio (3.0.8)
     thor (1.2.2)
     tilt (2.3.0)
@@ -315,6 +318,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-19
+  x86_64-linux
 
 DEPENDENCIES
   byebug
